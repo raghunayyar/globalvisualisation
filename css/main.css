@@ -74,6 +74,12 @@ body {
   list-style: none outside none;
 }
 
+.questions ul li.active {
+  font-size: 20px;
+  color: #fff;
+  padding: 30px 0;
+}
+
 a {
   color: #aaa;
   text-decoration: none;

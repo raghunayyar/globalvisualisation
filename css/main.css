@@ -105,7 +105,7 @@ a:hover {
   z-index: 1000;
 }
 
-.year:hover, .year.active {
+.year.active {
   font-size: 23px;
   color: #fff;
 }

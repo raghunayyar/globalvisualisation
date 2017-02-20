@@ -9,62 +9,75 @@
   <body>
 
     <div id="title">
-      <h1>Now I see me.</h1>
+      <h1>Global Neighbors</h1>
     </div>
     <div class="questions">
-      <h3>I see myself as a person who thinks I: </h3>
-        <ul>
-          <li id="question1" class="question">
-            aids
-          </li>
-          <li id="question2" class="question">
-            criminal
-          </li>
-          <li id="question3" class="question">
-            drinkers
-          </li>
-          <li id="question4" class="question">
-            drugs
-          </li>
-          <li id="question5" class="question">
-            emotional
-          </li>
-          <li id="question6" class="question">
-            extremists
-          </li>
-          <li id="question7" class="question">
-            homo
-          </li>
-          <li id="question8" class="question">
-            narcos
-          </li>
-          <li id="question9" class="question">
-            median age
-          </li>
-          <li id="question10" class="question">
-            self employed
-          </li>
-          <li id="question10" class="question">
-            family workers
-          </li>
-          <li id="question11" class="question">
-            prostate cancer
-          </li>
-          <li id="question12" class="question">
-            long term unemployed
-          </li>
-        </ul>
+      <h3>Data provided by:</h3>
+      <select style="margin-bottom: 30px;" id="datagivers">
+        <option id="wvs" value="wvs">WVS</option>
+        <option id="gap" value="gap">Gapminder</option>
+      </select>
+      <div id="wvsdata">
+        <h3>I have a problem with my neighbors:</h3>
+          <ul>
+            <li id="question1" class="question">
+              <span>They might have AIDS.</span>
+            </li>
+            <li id="question2" class="question">
+              <span>The might be criminals.</span>
+            </li>
+            <li id="question3" class="question">
+              <span>The might be alcoholics.</span>
+            </li>
+            <li id="question4" class="question">
+              <span>They might be doing drugs, right now.</span>
+            </li>
+            <li id="question5" class="question">
+              <span>They are emotionally unstable.</span>
+            </li>
+            <li id="question6" class="question">
+              <span>They are politically extremists.</span>
+            </li>
+            <li id="question7" class="question">
+              <span>The are homosexuals.</span>
+            </li>
+            <li id="question8" class="question">
+              <span>They have been involved in drug trafficking.</span>
+            </li>
+          </div>
+          <div id="gapminderdata" style="display: none;">
+            <h3>I am stalking them:</h3>
+            <ul>
+              <li id="question9" class="question">
+                <span>I know their median age.</span>
+              </li>
+              <li id="question10" class="question">
+                <span>They could be self employed.</span>
+              </li>
+              <li id="question10" class="question">
+                <span>The could be family workers.</span>
+              </li>
+              <li id="question11" class="question">
+                <span>The could have prostate cancer.</span>
+              </li>
+              <li id="question12" class="question">
+                <span>The chance they long term unemployed.</span>
+              </li>
+            </ul>
+          </div>
       </div>
     </div>
 
     <div id="container" style="margin-top: -30px;"></div>
 
-    <ul id="currentInfo">
-      <li id="year1995" class="year">1995 - 1998</li>
-      <li id="year1999" class="year">1999 - 2004</li>
-      <li id="year2005" class="year">2005 - 2009</li>
-      <li id="year2010" class="year">2010 - 2014</li>
-    </ul>
+    <div id="currentInfocontainer">
+      <ul id="currentInfo">
+        <li id="year1995" class="year">1995 - 1998</li>
+        <li id="year1999" class="year">1999 - 2004</li>
+        <li id="year2005" class="year">2005 - 2009</li>
+        <li id="year2010" class="year">2010 - 2014</li>
+      </ul>
+    </div>
 
     <div id="info">
     Built with <a href="http://www.chromeexperiments.com/globe">WebGL Globe</a> by <a href="http://raghunayyar.com/">Raghu Nayyar</a>
@@ -73,11 +86,11 @@
 </div>
 
 
-    <script type="text/javascript" src="http://127.0.0.1:8080/js/vendor/Detector.js"></script>
-    <script type="text/javascript" src="http://127.0.0.1:8080/js/vendor/three.min.js"></script>
-    <script type="text/javascript" src="http://127.0.0.1:8080/js/vendor/Tween.js"></script>
-    <script type="text/javascript" src="http://127.0.0.1:8080/js/globe.js"></script>
-    <script type="text/javascript" src="http://127.0.0.1:8080/js/main.js"></script>
+    <script type="text/javascript" src="/js/vendor/Detector.js"></script>
+    <script type="text/javascript" src="/js/vendor/three.min.js"></script>
+    <script type="text/javascript" src="/js/vendor/Tween.js"></script>
+    <script type="text/javascript" src="/js/globe.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 
   </body>
 

@@ -1,8 +1,19 @@
 $(document).ready( function() {
   if(!Detector.webgl){
+
     Detector.addGetWebGLMessage();
+
   } else {
 
+    $('#datagivers').change(function(){
+      if($(this).val() == 'wvs') {
+        $('#wvsdata').show();
+        $('#gapminderdata').hide();
+      } else if ($(this).val() == 'gap'){
+        $('#gapminderdata').show();
+        $('#wvsdata').hide();
+      }
+    });
     var years = ["1995 - 1998","1999 - 2004","2005 - 2009","2010 - 2014"];
     var questions = 12;
     var container = document.getElementById('container');

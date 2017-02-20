@@ -3,6 +3,7 @@
   <head>
     <title>IVIS - 2017</title>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
   </head>
@@ -12,38 +13,40 @@
       <h1>Global Neighbors</h1>
     </div>
     <div class="questions">
-      <h3>Data provided by:</h3>
-      <select style="margin-bottom: 30px;" id="datagivers">
-        <option id="wvs" value="wvs">WVS</option>
-        <option id="gap" value="gap">Gapminder</option>
-      </select>
-      <div id="wvsdata">
-        <h3>I have a problem with my neighbors:</h3>
-          <ul>
-            <li id="question1" class="question">
-              <span>They might have AIDS.</span>
-            </li>
-            <li id="question2" class="question">
-              <span>The might be criminals.</span>
-            </li>
-            <li id="question3" class="question">
-              <span>The might be alcoholics.</span>
-            </li>
-            <li id="question4" class="question">
-              <span>They might be doing drugs, right now.</span>
-            </li>
-            <li id="question5" class="question">
-              <span>They are emotionally unstable.</span>
-            </li>
-            <li id="question6" class="question">
-              <span>They are politically extremists.</span>
-            </li>
-            <li id="question7" class="question">
-              <span>The are homosexuals.</span>
-            </li>
-            <li id="question8" class="question">
-              <span>They have been involved in drug trafficking.</span>
-            </li>
+        <h3>Data provided by:</h3>
+        <select style="margin-bottom: 30px;" id="datagivers">
+          <option id="wvs" value="wvs">WVS</option>
+          <option id="gap" value="gap">Gapminder</option>
+        </select>
+        <div id="wvsdata">
+          <h3>I have a problem with my neighbors:</h3>
+            <ul>
+              <li id="question1" class="question">
+                <span>They might have AIDS.</span>
+              </li>
+              <li id="question2" class="question">
+                <span>The might be criminals.</span>
+              </li>
+              <li id="question3" class="question">
+                <span>The might be alcoholics.</span>
+              </li>
+              <li id="question4" class="question">
+                <span>They might be doing drugs, right now.</span>
+              </li>
+              <li id="question5" class="question">
+                <span>They are emotionally unstable.</span>
+              </li>
+              <li id="question6" class="question">
+                <span>They are politically extremists.</span>
+              </li>
+              <li id="question7" class="question">
+                <span>The are homosexuals.</span>
+              </li>
+              <li id="question8" class="question">
+                <span>They have been involved in drug trafficking.</span>
+              </li>
+            </ul>
+            <p style="font-family: Lato;"><em>* default values are for 2010 - 2014.</em></p>
           </div>
           <div id="gapminderdata" style="display: none;">
             <h3>I am stalking them:</h3>
@@ -64,6 +67,7 @@
                 <span>The chance they long term unemployed.</span>
               </li>
             </ul>
+            <p style="font-family: Lato;"><em>* default values are for 2010 - 2014.</em></p>
           </div>
       </div>
     </div>

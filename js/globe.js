@@ -104,7 +104,7 @@ DAT.Globe = function(container, opts) {
     shader = Shaders['earth'];
     uniforms = THREE.UniformsUtils.clone(shader.uniforms);
 
-    uniforms['texture'].value = THREE.ImageUtils.loadTexture('http://127.0.0.1:8080'+imgDir+'world.jpg');
+    uniforms['texture'].value = THREE.ImageUtils.loadTexture(imgDir+'world.jpg');
 
     material = new THREE.ShaderMaterial({
 
@@ -398,10 +398,16 @@ DAT.Globe = function(container, opts) {
     this._time = t;
   });
 
+  function reset() {
+    scene.remove(this.points);
+    this.points = null;
+  }
+
   this.addData = addData;
   this.createPoints = createPoints;
   this.renderer = renderer;
   this.scene = scene;
+  this.reset = reset;
 
   return this;
 

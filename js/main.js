@@ -4,13 +4,113 @@ $(document).ready( function() {
   } else {
 
     var years = ["1995 - 1998","1999 - 2004","2005 - 2009","2010 - 2014"];
-    var questions = 14;
+    var questions = 8;
     var container = document.getElementById('container');
     var globe = new DAT.Globe(container);
 
+    var defaultObj =
+    [
+      ["1995 - 1998",[]],
+      ["1999 - 2004",[]],
+      ["2005 - 2009",[]],
+      ["2010 - 2014",[]]
+    ];
+
     var i, tweens = [];
 
+    globe.createPoints();
+
+    globe.animate();
+
+    $('#question1').click(function() {
+      $.get('data/aids.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+    $('#question2').click(function() {
+      $.get('data/criminal.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+    $('#question3').click(function() {
+      $.get('data/drinkers.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+    $('#question4').click(function() {
+      $.get('data/drugs.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+    $('#question5').click(function() {
+      $.get('data/emotional.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+    $('#question6').click(function() {
+      $.get('data/extremists.json', function(data) {
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+    $('#question7').click(function() {
+      $.get('data/homosexual.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+    $('#question8').click(function() {
+      $.get('data/narcos.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
     // Toggler for setting the year
+    /*
     var settime = function(globe, t) {
       return function() {
         new TWEEN.Tween(globe).to({time: t/years.length},500).easing(TWEEN.Easing.Cubic.EaseOut).start();
@@ -25,6 +125,7 @@ $(document).ready( function() {
         y.setAttribute('class', 'year active');
       };
     };
+
 
     // Toggler for the question
     var setquestion = function(globe, t) {
@@ -160,5 +261,6 @@ $(document).ready( function() {
       }
       return strArray;
     }
+    */
   }
 });

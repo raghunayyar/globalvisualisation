@@ -109,6 +109,23 @@ a:hover {
   z-index: 1000;
 }
 
+#countries {
+  font-family: "Lato";
+  position: absolute;
+  right: 10px;
+  top: 100px;
+}
+
+#listofcountries {
+  margin: 0;
+  padding: 0;
+}
+
+#listofcountries li {
+  list-style: none outside none;
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .year.active {
   color: #fff;
   border-bottom: 2px solid #fff;

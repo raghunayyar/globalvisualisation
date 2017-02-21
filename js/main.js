@@ -224,5 +224,13 @@ $(document).ready( function() {
     }
 
     TWEEN.start();
+
+    $.get('data/defaults/country.json', function(data) {
+      var country = '';
+      $.each(data, function(key, val) {
+        country += '<li id="' + key + '">' + val.name.common + '</li>';
+      });
+      $('#listofcountries').append(country);
+    })
   }
 });

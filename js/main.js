@@ -181,7 +181,35 @@ $(document).ready( function() {
 
     $('#question11').click(function() {
       toggleactivity(this);
+      $.get('data/familyjob.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+          pushdata(data);
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+
+    $('#question12').click(function() {
+      toggleactivity(this);
       $.get('data/prostate.json', function(data) {
+        globe.reset();
+        for ( var i = 0; i < data.length; i ++ ) {
+          globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
+          pushdata(data);
+        }
+        globe.createPoints();
+        globe.animate();
+      });
+    });
+
+
+    $('#question13').click(function() {
+      toggleactivity(this);
+      $.get('data/longunemployed.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );

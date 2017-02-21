@@ -142,3 +142,7 @@ a:hover {
   left: 50%;
   margin-left: -250px;
 }
+
+.strike {
+  text-decoration: line-through;
+}

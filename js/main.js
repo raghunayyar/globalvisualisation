@@ -51,8 +51,22 @@ $(document).ready( function() {
       el.setAttribute('class', 'question active');
     }
 
+    var disableyears = function (i) {
+      var id = '#year' + i.substring(0,4);
+      $(id).addClass('strike');
+    };
+
+    var cleanyears = function () {
+      if ($('.year').hasClass('strike')) {
+        $('.year').removeClass('strike');
+      } else {
+        return;
+      }
+    }
+
     $('#question1').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/aids.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
@@ -66,9 +80,13 @@ $(document).ready( function() {
 
     $('#question2').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/criminal.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -78,10 +96,14 @@ $(document).ready( function() {
     });
 
     $('#question3').click(function() {
+      cleanyears();
       toggleactivity(this);
       $.get('data/drinkers.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -95,6 +117,9 @@ $(document).ready( function() {
       $.get('data/drugs.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
         }
         globe.createPoints();
@@ -104,9 +129,13 @@ $(document).ready( function() {
 
     $('#question5').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/emotional.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -117,8 +146,12 @@ $(document).ready( function() {
 
     $('#question6').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/extremists.json', function(data) {
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -129,9 +162,13 @@ $(document).ready( function() {
 
     $('#question7').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/homosexual.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -142,9 +179,13 @@ $(document).ready( function() {
 
     $('#question8').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/narcos.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -155,9 +196,13 @@ $(document).ready( function() {
 
     $('#question9').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/medianage.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -168,9 +213,13 @@ $(document).ready( function() {
 
     $('#question10').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/selfemployment.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -181,9 +230,13 @@ $(document).ready( function() {
 
     $('#question11').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/familyjob.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -195,9 +248,13 @@ $(document).ready( function() {
 
     $('#question12').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/prostate.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
@@ -209,9 +266,13 @@ $(document).ready( function() {
 
     $('#question13').click(function() {
       toggleactivity(this);
+      cleanyears();
       $.get('data/longunemployed.json', function(data) {
         globe.reset();
         for ( var i = 0; i < data.length; i ++ ) {
+          if (data[i][1].length === 0 ) {
+            disableyears(data[i][0]);
+          }
           globe.addData( data[i][1], {format: 'magnitude', name: data[i][0]} );
           pushdata(data);
         }
